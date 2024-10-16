@@ -1,6 +1,8 @@
 <?php
+
 // Maximale Indexe sind: Anzahl der Elemente - 1
-function bubbleSort($numberList) {
+function bubbleSort($numberList)
+{
     $indexes = count($numberList) - 1;
     // Abbruchwert für sortierte Arrays
     $sorted = false;
@@ -23,4 +25,3 @@ function bubbleSort($numberList) {
     }
     return $numberList;
 }
-?>

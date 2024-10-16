@@ -6,21 +6,19 @@ include 'bubble_sort.php';
 
 <!DOCTYPE html>
 <html>
-
-<body>
+  <body>
     <center>
-        <h1>Bubble Sort</h1>
-        <h2>Gib zu sortierende Daten ein:</h2>
-        <form name="form" action="" method="post">
-            <input type="text" name="input" id="input" value="">
-        </form>
-        <br>
-        <?php $numberList = getInput($_POST['input']); ?>
-        <?php $sorted = bubbleSort($numberList); ?>
-        <strong>
-            <?php printData($sorted); ?>
-        </strong>
+      <h1>Bubble Sort</h1>
+      <h2>Gib zu sortierende Daten ein:</h2>
+      <form name="form" action="" method="post">
+        <input type="text" name="input" id="input" value="">
+      </form>
+      <br>
+      <?php $numberList = isset($_POST['input']) ? getInput($_POST['input']) : []; ?>
+      <?php $sorted = bubbleSort($numberList); ?>
+      <strong>
+        <?php printData($sorted); ?>
+      </strong>
     </center>
-</body>
-
+  </body>
 </html>

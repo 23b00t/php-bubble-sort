@@ -1,10 +1,12 @@
 <?php
+
 include "bubble_sort.php";
 include "print.php";
 
 runTest();
 
-function runTest() {
+function runTest()
+{
     // for Schleife für 10 Testwiederholungen
     for ($n = 1; $n <= 10; $n++) {
         // Zufällige Anzahl an Elementen erzeugen (4-20)
@@ -30,7 +32,8 @@ function runTest() {
     }
 }
 
-function initData($elementCount) {
+function initData($elementCount)
+{
     // Initialisiere Array
     $array = [];
     // Element = Zufallszahl (-100 - 100), uniq!
@@ -44,7 +47,8 @@ function initData($elementCount) {
     return $array;
 }
 
-function printResultConsole($n, $array, $sorted, $execTime, $benchmark) {
+function printResultConsole($n, $array, $sorted, $execTime, $benchmark)
+{
     echo "Test Nr.: " . $n . "\n";
     echo "----------------------------------------------------------------------------------\n";
     echo "(Unsortiert)" . printData($array) . "\n";
@@ -55,16 +59,16 @@ function printResultConsole($n, $array, $sorted, $execTime, $benchmark) {
     echo "\n";
 }
 
-function printResultBrowser($n, $array, $sorted, $execTime, $benchmark) {
+function printResultBrowser($n, $array, $sorted, $execTime, $benchmark)
+{
     echo "<div style='margin-left: 400px; margin-right: 400px; margin-top: 32px; margin-bottom: 32px;'>";
-        echo "<strong> Test Nr.: " . $n . "</strong> <br>";
-        echo "<hr>";
-        echo "(Unsortiert)" . printData($array) . "<br>";
-        echo "(Sortiert)" . printData($sorted) . "<br>";
-        echo "<hr>";
-        echo "Ausführungszeit: " . $execTime . " Mikrosekunden" . "<br>";
-        echo "Zeit / Element : " . $benchmark . " Mikrosekunden" . "<br>";
-        echo "<hr>";
+    echo "<strong> Test Nr.: " . $n . "</strong> <br>";
+    echo "<hr>";
+    echo "(Unsortiert)" . printData($array) . "<br>";
+    echo "(Sortiert)" . printData($sorted) . "<br>";
+    echo "<hr>";
+    echo "Ausführungszeit: " . $execTime . " Mikrosekunden" . "<br>";
+    echo "Zeit / Element : " . $benchmark . " Mikrosekunden" . "<br>";
+    echo "<hr>";
     echo "</div>";
 }
-?>
